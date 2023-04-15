@@ -43,14 +43,7 @@
         </div>
       </div>
     </div>
-    <div class="pl-scrollbar">
-      <div class="mx-auto max-w-screen-xl">
-        <div class="pt-12 md:px-4 xl:px-8">
-          {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-          {{- partial "components/masonry" $pages }}
-        </div>
-      </div>
-    </div>
+    
     {{/* Deprecation warning(v1.0.0) ends */}}
 
   {{ end }}
