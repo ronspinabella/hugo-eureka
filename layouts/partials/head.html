@@ -53,7 +53,38 @@
 <title>{{ partial "get-title" . }}</title>
 
 <meta name="generator" content="Hugo Eureka {{ .Site.Data.eureka.version }}" />
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Ron Spinabella",
+  "url": "https://ronspinabella.com/",
+  "@id": "https://ronspinabella.com/#person",
+  "image": "https://ronspinabella.com/images/ron-spinabella.jpg",
+  "jobTitle": "SEO Consultant",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Spinabella SEO"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/ron-spinabella/",
+    "https://www.facebook.com/ron.spinabella/",
+    "https://www.instagram.com/ronspinabella/",
+    "https://www.crunchbase.com/person/ron-spinabella",
+    "https://www.youtube.com/channel/UCxClWRsBV8T144Q8fYnywog",
+    "https://twitter.com/ronspinabella",
+    "https://www.pinterest.com/ronspinabella1/",
+    "https://www.google.com/search?kgmid=/g/11fys_87q7"
+  ],
+  "alumniOf": "Eastern Illinois University",
+  "brand": "Spinabella SEO",
+  "familyName": "Spinabella",
+  "givenName": "Ron",
+  "alternateName": "Ron Spinabella Jr",
+  "description": "Ron Spinabella is a Digital Marketing Consultant in Las Vegas, Nevada. Ron Spinabella is founder and CEO of Spinabella SEO.",
+  "disambiguatingDescription": "Ron Spinabella is a Digital Marketing Consultant. Ron Spinabella is Chief Executive Officer of Spinabella SEO. Ron Spinabella lives in Las Vegas, Nevada."
+}
+</script>
 {{- $eurekaCSS := resources.Get "css/eureka.css" | postCSS (dict "config" "./assets/css/postcss.config.js" "inlineImports" true) | resources.ExecuteAsTemplate "css/eureka.css" . | minify | fingerprint "sha384" }}
 <link rel="stylesheet" href="{{ $eurekaCSS.Permalink }}">
 
