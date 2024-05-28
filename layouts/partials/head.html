@@ -63,7 +63,11 @@
 <title>{{ partial "get-title" . }}</title>
 
 <meta name="generator" content="Hugo Eureka {{ .Site.Data.eureka.version }}" />
-
+{{ if .Params.canonicalURL }}
+  <link rel="canonical" href="{{ .Params.canonicalURL }}">
+{{ else }}
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
